@@ -140,5 +140,5 @@ cython_debug/
 # Visual Studio Code
 .vscode/
 
-fashionrec/config/secret.py
+secret.py
 script/

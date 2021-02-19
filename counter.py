@@ -56,4 +56,4 @@ if __name__=='__main__':
     data = db.execute("SELECT * FROM `vw_fashion_items`")
     counter = FashionCounter(attributes=ATTRIBUTES)
     counter.update(pd.DataFrame(data))
-    counter.save('../data/counter.pkl')
+    counter.save('data/counter.pkl')

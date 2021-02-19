@@ -6,13 +6,13 @@ import traceback
 from flask import Flask, request, Response
 from collections import OrderedDict
 
-from .config import config
-from .model import FashionRec
+from config import config
+from model import Recommender
 
 
 app = Flask(__name__)
 
-model = FashionRec()
+model = Recommender()
 model.build_index(config.MODEL_COUNTER_PATH, config.MODEL_MAX_HEAPSIZE)
 model.connect_db(
     host=config.DB_HOST,

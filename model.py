@@ -8,10 +8,10 @@ from collections import defaultdict, OrderedDict
 import numpy as np
 
 
-from .util import *
-from .db_handler import DatabaseHandler
+from util import *
+from db_handler import DatabaseHandler
 
-class FashionRec:
+class Recommender:
     def __init__(self):
         self.index = None
         self.attributes = None
