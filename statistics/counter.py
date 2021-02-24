@@ -10,9 +10,9 @@ from itertools import permutations, product
 from collections import Counter
 import logging
 
-from config import config
-from util import attr2keys, DELIM
-from db_handler import DatabaseHandler
+from ..config import config
+from .util import attr2keys, DELIM
+from .db_handler import DatabaseHandler
 
 class FashionCounter:
     def __init__(self, attributes):
@@ -56,4 +56,4 @@ if __name__=='__main__':
     data = db.execute("SELECT * FROM `vw_fashion_items`")
     counter = FashionCounter(attributes=ATTRIBUTES)
     counter.update(pd.DataFrame(data))
-    counter.save('data/counter.pkl')
+    counter.save('../data/counter.pkl')

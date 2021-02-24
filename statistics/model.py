@@ -8,8 +8,8 @@ from collections import defaultdict, OrderedDict
 import numpy as np
 
 
-from util import *
-from db_handler import DatabaseHandler
+from .util import *
+from .db_handler import DatabaseHandler
 
 class Recommender:
     def __init__(self):
@@ -106,10 +106,8 @@ class Recommender:
                 ...
             }
             
-        :ngroups_max: 추천될 속성 셋 최대 개수. None이면 전부 반환
-        
-        :nitems_max: 속성 셋 별 최대 아이템 개수. None이면 전부 반환
-        
+        :param ngroups_max: 추천될 속성 셋 최대 개수. None이면 전부 반환
+        :param nitems_max: 속성 셋 별 최대 아이템 개수. None이면 전부 반환
         :param filter_category: 추천에서 제외하고 싶은 category list
         
         returns (Top items, Top attributes with percentage) 

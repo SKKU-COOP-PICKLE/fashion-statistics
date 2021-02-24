@@ -7,7 +7,7 @@ from flask import Flask, request, Response
 from collections import OrderedDict
 
 from config import config
-from model import Recommender
+from statistics.model import Recommender
 
 
 app = Flask(__name__)
